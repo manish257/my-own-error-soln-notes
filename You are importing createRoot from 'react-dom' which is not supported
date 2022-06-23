@@ -1,0 +1,18 @@
+The error "You are importing createRoot from 'react-dom' which is not supported" occurs when we import the createRoot function from react-dom. To solve the error, import createRoot from react-dom/client, e.g. import {createRoot} from 'react-dom/client'.
+
+
+
+Solution:
+
+import {createRoot} from 'react-dom'; // 👈️ wrong import path
+
+// ✅ now importing from react-dom/client
+import {createRoot} from 'react-dom/client';
+
+
+
+=====
+
+ref:
+
+https://bobbyhadz.com/blog/react-you-are-importing-createroot-from-react-dom#:~:text=The%20error%20%22You%20are%20importing,react%2Ddom%2Fclient'%20.
