@@ -1,0 +1,52 @@
+
+npm install react@18 react-dom@18
+
+// in indexjs
+
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+
+//ReactDOM.render(<App />, document.getElementByUd('root'));
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+
+//New APIs
+// for concurrency- you can prioritize eg state updates
+
+
+// concurrent APIs
+
+useTransition()
+startTransition()
+useDeferredValue()
+
+// We can tell react that some state update may be handled with lower priority
+
+useTransition()
+-  use in functional components
+- Returns an array with exactly two values:
+ [isPending, startTransition]
+
+
+startTransition()
+- use in places where hooks can't be used
+
+// Wrap a state update with startTransition() to let React know that it  may be handled with low priority
+
+startTransition(() => setSelectedUser(user));
+
+
+// tell React that an older value should be displayed until a new (updated) value is ready
+
+useDeferredValue()
+- kind of similar to startTransition() but can be used in cases where you dont have full control over state update
+
+- receiving a stateful value as props
+- wrap a value and get a deferred (old) value until an updated value is available
+
+const deferredVal = useDeferredValue(value);
+
+
