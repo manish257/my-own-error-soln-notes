@@ -1,0 +1,32 @@
+
+go to the root index file,
+
+import { createStore, applyMiddleware, compose } from 'redux';
+
+then before declaring store,
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(reducers,composeEnhancers(applyMiddleware()));
+
+// will use applyMiddleware(thunk) 
+// after using middleware
+
+// setup complete now you should be able to see the store and states in redux dev tools
+
+
+Another use,
+
+Debug sessions with redux dev tools
+
+when you go to,
+
+localhost:3000?debug_session=<some_string>
+
+eg.
+
+localhost:3000?debug_session=ndwoiwcxow
+
+after this, redux dev tools makes sure that the data stays around between the refreshes of the page.
+
+we can also name these sessions and come back to them later
