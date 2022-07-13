@@ -1,0 +1,26 @@
+
+install first,
+
+sudo apt install postgresql
+
+starting postgresql,
+
+sudo -u postgres psql
+
+connecting to server,
+
+psql -U postgres -h localhost
+
+where postgres is user/ superuser here and host localhost
+
+run postgres,
+
+sudo -u postgres psql
+
+
+\du - lists users
+
+\l - lists databases
+
+
+now install pgadmin from package manager for interface
