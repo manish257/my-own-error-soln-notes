@@ -1,0 +1,36 @@
+
+make sure nvm is installed
+
+node -v
+to check current node version
+
+nvm --version
+to check current version of nvm
+
+we can now install as many versions of node using nvm and use the required version when needed
+
+to install version 14.20.0 use,
+
+nvm install v14.20.0
+
+use nvm list to see all the available node versions on the system
+
+nvm list can show available node versions now you can change versions using,
+
+nvm use v16.15.1
+
+just write the version name and it changes.
+
+=====
+
+for installing nvm
+
+sudo apt install curl 
+
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
+source ~/.bashrc   
+
+=====
+
+
