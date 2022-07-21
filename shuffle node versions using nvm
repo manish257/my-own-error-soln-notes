@@ -34,3 +34,10 @@ source ~/.bashrc
 =====
 
 
+check available nvm node versions,
+
+nvm list-remote
+
+
+
+

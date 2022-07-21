@@ -1,0 +1,83 @@
+
+Installing: 
+
+
+Node.js v18.x:
+
+# Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+apt-get install -y nodejs
+Node.js v16.x:
+
+# Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+apt-get install -y nodejs
+Node.js v14.x:
+
+# Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+apt-get install -y nodejs
+Node.js LTS (v16.x):
+
+# Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
+apt-get install -y nodejs
+Node.js Current (v18.x):
+
+# Using Ubuntu
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -fsSL https://deb.nodesource.com/setup_current.x | bash -
+apt-get install -y nodejs
+
+
+
+=============
+
+
+Uninstall NodeJs
+$ sudo apt remove nodejs npm
+$ sudo apt purge nodejs  (to remove configuration )
+$ sudo apt autoremove (to remove dependencies )
+
+===========
+
+
+$ sudo rm -rf /usr/local/bin/npm 
+$ sudo rm -rf /usr/local/share/man/man1/node* 
+$ sudo rm -rf /usr/local/lib/dtrace/node.d 
+$ sudo rm -rf ~/.npm 
+$ sudo rm -rf ~/.node-gyp 
+$ sudo rm -rf /opt/local/bin/node 
+$ sudo rm -rf opt/local/include/node 
+$ sudo rm -rf /opt/local/lib/node_modules  
+$ sudo rm -rf /usr/local/lib/node*
+$ sudo rm -rf /usr/local/include/node*
+$ sudo rm -rf /usr/local/bin/node*
+
+=======
+
+NVM ( Node version Manager)
+$ nvm current 
+$ nvm deactiate
+$ nvm uninstall 12.17.0
+
+
