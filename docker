@@ -1,0 +1,103 @@
+
+check if docker is installed with
+
+docker --version
+
+install using,
+sudo apt install docker.io
+
+docker --version
+
+sudo systemctl status docker
+
+check if docker works by using command,
+
+sudo docker run hello-world
+
+dont forget to use sudo to use docker if you are on linux
+
+to see docker images available,
+sudo docker images
+
+to see running and available docker apps, ps = process status
+sudo docker ps
+sudo docker container ls
+
+to see hidden processes,
+sudo docker ps -a
+
+to see all docker images,
+sudo docker image ls
+
+use postgres image with docker-compose,
+first install docker-compose
+sudo apt install docker-compose
+
+make a yml file for docker compose with name docker-compose.yml
+
+should include texts like:
+
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+code ref:
+https://hub.docker.com/_/postgres
+
+now you can run this yml file to run docker image using command,
+sudo docker-compose up
+
+or
+
+sudo docker-compose up -d
+
+
+now check you system postgres by using,
+psql -U postgres -h localhost
+
+
+if you want to pull any docker image:
+sudo docker pull mongo
+
+now you can run mongo using,
+
+sudo docker run -d -p 2701:2701 mongo
+
+
+after running docker ps we can run a command in a running container using:
+
+sudo docker exec -it nameofcontainer
+where it is the command we used
+
+we have to stop container when using done:
+
+sudo docker container stop nameofcontainer
+
+we can remove container using:
+sudo docker rm nameofcontainer
+
+
+======
+
+if you already got the database and docker-composite file, just cd into that folder and use:
+sudo docker-compose up
+
+
+
+
+
+
+
